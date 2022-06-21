@@ -1,12 +1,13 @@
 
 
+
 const chlib = require('./ChJSLibrary')
 
 // Node.js の http モジュールを読み込む
 const http = require('http');
 const file = require('fs');
 
-const firstHTML = process.argv.length > 2 ? "../" + process.argv[2] : "../index.html";
+const firstHTML = process.argv.length > 2 ? process.argv[2] : "../index.html";
 
 // サーバーを生成
 let myServer = http.createServer();
