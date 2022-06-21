@@ -1,4 +1,6 @@
-
+/*
+https://www.kipure.com/article/225/
+*/
     const types = 
     {
         '.html' : 'text/html',
