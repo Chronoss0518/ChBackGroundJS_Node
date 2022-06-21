@@ -6,6 +6,7 @@ https://www.kipure.com/article/225/
     {
         '.html' : 'text/html',
         '.htm'  : 'text/html',
+        '.md'   : 'text/html',
         '.xml'  : 'text/xml',
         '.xaml' : 'text/xml',
         '.css'  : 'text/css',
@@ -41,3 +42,18 @@ https://www.kipure.com/article/225/
         }
         return false;
     };
+
+    const marked = require("marked");
+
+    exports.ParseMarkDown = function(_data)
+    {
+      if(marked == null)
+      {
+        console.log("import to marked,");
+        return _data;
+      }
+
+      return marked.parse(_data);
+
+    }
+

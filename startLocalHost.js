@@ -47,6 +47,11 @@ function RequestFunction(req, res){
                 return res.end();
             }
             
+            if(url.endsWith(".md"))
+            {
+                data = chlib.ParseMarkDown(data);
+            }
+
             // 成功した場合のHTTPステータスコード「200」を、HTTPヘッダに入れる
             // HTMLを表示するため「text/html」に設定する
             res.writeHead(200, {'Content-Type': mimeType});
