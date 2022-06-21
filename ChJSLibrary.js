@@ -1,4 +1,5 @@
 /*
+参考URL
 https://www.kipure.com/article/225/
 */
     const types = 
