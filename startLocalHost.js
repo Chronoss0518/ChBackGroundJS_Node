@@ -1,13 +1,14 @@
 
 
-
 const chlib = require('./ChJSLibrary')
 
 // Node.js の http モジュールを読み込む
 const http = require('http');
 const file = require('fs');
 
-const firstHTML = process.argv.length > 2 ? process.argv[2] : "../index.html";
+const firstHTML = process.argv.length > 2 ? process.argv[2] : "index.html";
+
+const currentDir = process.cwd();
 
 // サーバーを生成
 let myServer = http.createServer();
@@ -16,7 +17,7 @@ console.log("start");
 
 function RequestFunction(req, res){
     // アクセス情報をターミナルに出力
-    var url = (req.url.indexOf('.') < 0 ? __dirname + req.url + firstHTML :  __dirname + req.url );
+    var url = (req.url.indexOf('.') < 0 ? currentDir + req.url + firstHTML :  currentDir + req.url );
     //if(!file.existsSync(url)){url = 'public' + url;}
 
     console.log(`url:${url}`);
