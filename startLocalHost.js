@@ -8,6 +8,8 @@ const file = require('fs');
 
 const firstHTML = process.argv.length > 2 ? process.argv[2] : "index.html";
 
+const portNum = new String(process.argv.length > 3 ?  process.argv[3].toString() : "8000");
+
 const currentDir = process.cwd();
 
 // サーバーを生成
@@ -65,7 +67,7 @@ function RequestFunction(req, res){
 
 myServer.on('request',RequestFunction); 
 
-myServer.listen(port = 8000);
+myServer.listen(port = Number.parseInt(portNum,10));
 
 
 console.log("wait");
