@@ -47,6 +47,7 @@ https://www.kipure.com/article/225/
 
     exports.ParseMarkDown = function(_data)
     {
+
       if(marked == null)
       {
         console.log("import to marked,");
@@ -57,3 +58,4 @@ https://www.kipure.com/article/225/
 
     }
 
+      
